@@ -102,5 +102,5 @@ ops/
 
 1. Clone 本仓到 `../ops`，或复制目录结构到私有 git 仓库
 2. 将所有 `CHANGE_ME` / `price_xxx` 替换为真实值
-3. 轮换 JWT、Centrifugo、数据库、支付、对象存储等全部密钥
+3. 轮换 JWT、Centrifugo、数据库、支付、对象存储、**用户数据加密 KEK**（`APP_USER_DATA_ENCRYPTION_KEK_BASE64`，可用 `openssl rand -base64 32` 生成）等全部密钥
 4. 在业务仓执行 `./scripts/sync-to-build-machine.sh` 后再 `./scripts/deploy.sh`
